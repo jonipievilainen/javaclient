@@ -7,6 +7,8 @@ package clienttidemo;
 
 import java.io.*;
 import java.net.*;
+import devicemanager.DeviceManager;
+import filemanager.FileManager;
 
 /**
  *
@@ -18,6 +20,15 @@ public class ClienttiDemo {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
+        
+        devicemanager.DeviceManager thisDevice = new devicemanager.DeviceManager();
+        filemanager.FileManager currrentFiles = new filemanager.FileManager();
+        
+        thisDevice.getEthernetMacNumber();
+        
+        currrentFiles.checkCurrentFilesSameAsServer();
+        
+        /*
         String sentence;
         String modifiedSentence;
         BufferedReader inFromUser = new BufferedReader( new InputStreamReader(System.in));
@@ -29,6 +40,7 @@ public class ClienttiDemo {
         modifiedSentence = inFromServer.readLine();
         System.out.println("FROM SERVER: " + modifiedSentence);
         clientSocket.close();
+        */
     }
     
 }

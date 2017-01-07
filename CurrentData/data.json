@@ -1,0 +1,28 @@
+{
+	"settings": {
+		0: {
+			"file": "juuuj.PNG",
+			"displayTime": 3000
+		},
+		1: {
+			"file": "pohja4.PNG",
+			"displayTime": 5000
+		},
+		2: {
+			"file": "ps1_emu_v1.png",
+			"displayTime": 1000
+		},
+		3: {
+			"file": "pulu.jpg",
+			"displayTime": 1000
+		},
+		4: {
+			"file": "steam.png",
+			"displayTime": 3000
+		},
+		5: {
+			"file": "uusi_pohja.png",
+			"displayTime": 3000
+		}
+	}
+}
