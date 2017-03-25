@@ -7,15 +7,20 @@ package filemanager;
 
 import java.io.File;
 import java.util.*;
+import displaymanager.DisplayManager;
+import java.io.IOException;
 
 /**
  *
  * @author Pievi
  */
 public class FileManager {
-    public Boolean checkCurrentFilesSameAsServer(){
+    public Boolean checkCurrentFilesSameAsServer() throws IOException{
         
 //        getCurrentFiles();
+        
+        displaymanager.DisplayManager imgManager = new displaymanager.DisplayManager();
+        
         
         return false;
     }
