@@ -6,6 +6,8 @@
 package displaymanager;
 
 import java.awt.FlowLayout;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -33,20 +35,27 @@ public class DisplayManager {
         Boolean start = false;
         Integer adCounter = 0;
         Integer taimdfe = 1000;
-        String time = "";
-        
+        String time = "";  
+
         JFrame frame=new JFrame();
         frame.setLayout(new FlowLayout());
         frame.setSize(200,300);
         JLabel lbl=new JLabel();
         
         frame.add(lbl);
-
+        
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
         frame.setUndecorated(true);
-        frame.setVisible(true);        
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);   
+        frame.setResizable(true);
         
+        
+        GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice device = env.getDefaultScreenDevice();
+        device.setFullScreenWindow(frame);
+        
+        
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         while(!start) { 
             
