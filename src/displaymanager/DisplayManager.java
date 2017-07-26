@@ -35,6 +35,18 @@ public class DisplayManager {
         Integer taimdfe = 1000;
         String time = "";
         
+        JFrame frame=new JFrame();
+        frame.setLayout(new FlowLayout());
+        frame.setSize(200,300);
+        JLabel lbl=new JLabel();
+        
+        frame.add(lbl);
+
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+        frame.setUndecorated(true);
+        frame.setVisible(true);        
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
         
         while(!start) { 
             
@@ -45,19 +57,8 @@ public class DisplayManager {
             System.out.println("here");
             BufferedImage img=ImageIO.read(new File("CurrentData/"+file));
             ImageIcon icon=new ImageIcon(img);
-            JFrame frame=new JFrame();
-            frame.setLayout(new FlowLayout());
-            frame.setSize(200,300);
-            JLabel lbl=new JLabel();
+            
             lbl.setIcon(icon);
-            frame.add(lbl);
-            frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-            frame.setUndecorated(true);
-            frame.setVisible(true);        
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            
-           
-            
             
             Thread.sleep(Integer.parseInt(time));
             
