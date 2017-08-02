@@ -5,6 +5,7 @@
  */
 package displaymanager;
 
+import java.awt.Desktop;
 import java.awt.FlowLayout;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
@@ -61,13 +62,24 @@ public class DisplayManager {
             
             ArrayList conf = (ArrayList) configuers.get(adCounter);
             time = (String) conf.get(1);
+            
             String file = (String) conf.get(0);
             
-            System.out.println("here");
-            BufferedImage img=ImageIO.read(new File("CurrentData/"+file));
-            ImageIcon icon=new ImageIcon(img);
+            System.out.println(time);
             
-            lbl.setIcon(icon);
+            if(time.equals("0")){
+                
+                Desktop.getDesktop().open(new File("CurrentData/"+file));
+                
+                System.out.println("video");
+                time = "1000";
+            }else{
+                System.out.println("here");
+                BufferedImage img=ImageIO.read(new File("CurrentData/"+file));
+                ImageIcon icon=new ImageIcon(img);
+
+                lbl.setIcon(icon);
+            }
             
             Thread.sleep(Integer.parseInt(time));
             
