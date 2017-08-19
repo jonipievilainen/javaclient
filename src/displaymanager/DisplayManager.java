@@ -69,6 +69,8 @@ public class DisplayManager {
             
             if(time.equals("0")){
                 
+                // https://github.com/samicemalone/tv/blob/master/src/main/java/uk/co/samicemalone/tv/player/OMXPlayer.java
+                
                 Desktop.getDesktop().open(new File("CurrentData/"+file));
                 
                 System.out.println("video");

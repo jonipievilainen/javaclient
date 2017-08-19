@@ -1,6 +1,14 @@
 {  
 	"settings":[
 		{
+			"file":"high-resolution-wallpapers-1.jpg",
+			"displayTime":"3000"
+		},
+		{
+			"file":"video_demo.mp4",
+			"displayTime":"0"
+		},
+		{
 			"file":"juuuj.PNG",
 			"displayTime":"3000"
 		},
