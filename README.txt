@@ -1,3 +1,7 @@
+# Java client training
+
+Server site [here](https://github.com/jonipievilainen/javaserver)
+
 /*
 
 Pakatun clientin suorittaminen:
